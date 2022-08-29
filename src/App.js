@@ -1,24 +1,28 @@
-import logo from "./logo.svg";
+import result from "./result.svg";
 import "./App.css";
+// import Mapa from "./comps/Mapa";
 import { useState } from "react";
 import { axiosEm } from "./api/axiosEm";
+import { loadEm } from "./api/loadEm";
 
 function App() {
   const [query, querySet] = useState("");
-  const [weather, weatherSet] = useState({});
+  const [res, resSet] = useState({});
   //
   const search = async (e) => {
     if (e.key === "Enter") {
       const data = await axiosEm(query);
       console.log(data);
-      weatherSet(data);
+      resSet(data);
       querySet("");
     }
   };
 
   return (
     <div className="App">
-      <header className="App-header">{logo}</header>
+      <header className="App-header">
+        <img src ={result} width='30%' />
+      </header>
 
       <div>
         <input
@@ -28,7 +32,9 @@ function App() {
           onChange={(e) => querySet(e.target.value)}
           onKeyPress={search}
         />
-        {weather.main && <div>{weather.name}</div>}
+        {res && <div>{res.name}</div>}
+{loadEm()}      
+        {/* <Mapa  /> */}
       </div>
     </div>
   );
