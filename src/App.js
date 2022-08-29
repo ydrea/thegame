@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import { axiosEm } from "./api/axiosEm";
 
 function App() {
+  const [query, querySet] = useState("");
+  const [weather, weatherSet] = useState({});
+  //
+  const search = async (e) => {
+    if (e.key === "Enter") {
+      const data = await axiosEm(query);
+      console.log(data);
+      weatherSet(data);
+      querySet("");
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header">{logo}</header>
+
+      <div>
+        <input
+          label="Search"
+          type="search"
+          value={query}
+          onChange={(e) => querySet(e.target.value)}
+          onKeyPress={search}
+        />
+        {weather.main && <div>{weather.name}</div>}
+      </div>
     </div>
   );
 }
