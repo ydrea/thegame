@@ -52,7 +52,7 @@ function App() {
           }
         })
         .map((val, key) => {
-          return <div>{val.name} </div>;
+          return <div key={val.id}>{val.name} </div>;
         })}
     </div>
   );
