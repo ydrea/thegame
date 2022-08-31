@@ -2,11 +2,14 @@ import logo from "./assets/logo.svg";
 import "./styles/App.scss";
 // import Mapa from "./comps/Mapa";
 import { useState } from "react";
-import { axiosEm } from "./api/axiosEm";
+// import { axiosEm } from "./api/axiosEm";
+import { useSelector } from "react-redux";
 //
 import ldata from "./data/db.json";
+import Counter from "./api/Counter";
 //
 function App() {
+  const count = useSelector((state) => state.counter.count);
   // const [query, querySet] = useState("");
   // const [res, resSet] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,7 +39,8 @@ function App() {
           <button type="submit">play</button>
         </form>
       </header>
-      <div>Response {list}</div>
+      <div>Response {list[`${count}`]}</div>
+      <Counter />
     </div>
   );
 }

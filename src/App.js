@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "./App.css";
 import data from "./data/db.json";
 
 function App() {
@@ -9,9 +8,10 @@ function App() {
     <div className="App">
       <input
         type="text"
-        placeholder="seach..."
+        placeholder="search..."
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      <AddOneButton />
       {data.locations
         .filter((val) => {
           if (searchTerm == "") {
@@ -25,6 +25,10 @@ function App() {
         .map((val, key) => {
           return <div>{val.name} </div>;
         })}
+
+      <Count />
+      {/* <AddOneButton />
+      <Monitor /> */}
     </div>
   );
 }

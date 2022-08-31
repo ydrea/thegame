@@ -1,6 +1,17 @@
 {
   "locations": [
     {
+      "id": 0,
+      "title": "kumica",
+      "coordinate": { "latitude": 45.815, "longitude": 15.9811 },
+      "name": "Kumica",
+      "surname": "S Placa",
+      "description": "this is a Kumica",
+      "icon": "assets/ico/ping_0.png",
+      "img": "assets/img/Kumica.jpg"
+    },
+
+    {
       "id": 1,
       "title": "senoa",
       "coordinate": { "latitude": 45.815, "longitude": 15.9819 },
@@ -8,7 +19,7 @@
       "surname": "Senoa",
       "description": "this is a Senoa",
       "icon": "assets/ico/ping_1.png",
-      "img": "assets/img/senoa.jpg"
+      "img": "assets/img/Senoa.jpg"
     },
     {
       "id": 2,
@@ -18,7 +29,7 @@
       "surname": "Matos",
       "description": "this is a Matos",
       "icon": "assets/ico/ping_2.png",
-      "img": "assets/img/matos.jpg"
+      "img": "assets/img/Matos.jpg"
     },
     {
       "id": 3,
@@ -28,17 +39,17 @@
       "surname": "Ujevic",
       "description": "this is a Ujevic",
       "icon": "assets/ico/ping_3.png",
-      "img": "assets/img/ujevic.jpg"
+      "img": "assets/img/Ujevic.jpg"
     },
     {
       "id": 4,
       "title": "martic",
-      "coordinate": { "latitude": 45.8135, "longitude": 15.981 },
+      "coordinate": { "latitude": 45.8135, "longitude": 15.982 },
       "name": "Grgo",
       "surname": "Martic",
       "description": "this is a Martic",
       "icon": "assets/ico/ping_4.png",
-      "img": "assets/img/martic.jpg"
+      "img": "assets/img/Martic.jpg"
     },
     {
       "id": 5,
@@ -48,7 +59,7 @@
       "surname": "Krleza",
       "description": "this is a Krleza",
       "icon": "assets/ico/ping_5.png",
-      "img": "assets/img/krleza.jpg"
+      "img": "assets/img/Krleza.jpg"
     },
     {
       "id": 6,
@@ -58,7 +69,7 @@
       "surname": "Juric Zagorka",
       "description": "this is a Zagorka",
       "icon": "assets/ico/ping_6.png",
-      "img": "assets/img/zagorka.jpg"
+      "img": "assets/img/Zagorka.jpg"
     }
   ],
   "planets": [
