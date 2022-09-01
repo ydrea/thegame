@@ -5,6 +5,6 @@ import dataReducer from "./dataSlice";
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    data: dataReducer,
+    dataJSON: dataReducer,
   },
 });

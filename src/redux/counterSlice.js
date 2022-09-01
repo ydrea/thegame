@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+// import { selectEm } from "./dataSlice";
 
 const initialState = {
   count: 0,
@@ -15,5 +16,5 @@ export const counterSlice = createSlice({
 });
 
 export const { increment, decrement } = counterSlice.actions;
-
+export const selectCount = (state) => state.counter.count;
 export default counterSlice.reducer;

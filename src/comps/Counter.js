@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../redux/counterSlice";
+import { increment, decrement, selectCount } from "../redux/counterSlice";
 import { zip } from "lodash";
 
 //
@@ -29,7 +29,7 @@ export const Buttons = () => {
 };
 
 export const Monitor = () => {
-  const count = useSelector((state) => state.counter.count);
+  const count = useSelector(selectCount);
 
   return (
     <>

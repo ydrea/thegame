@@ -14,5 +14,6 @@ export const dataSlice = createSlice({
 
 export const { setIt, reSet } = dataSlice.actions;
 export const selectEm = (state) => state;
+export const selectLocations = (state) => state.dataJSON.locations;
 
 export default dataSlice.reducer;

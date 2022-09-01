@@ -5,20 +5,23 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //
 import ldata from "./data/db.json";
-import Counter from "./api/Counter";
-import { setIt, reSet, selectEm } from "./redux/dataSlice";
+import Counter from "./comps/Counter";
+import { setIt, reSet, selectEm, selectLocations } from "./redux/dataSlice";
+import { selectCount } from "./redux/counterSlice";
 //
 function App() {
-  const count = useSelector((state) => state.counter.count);
-  const data = selectEm();
-  // const loc = selectLocations();
-  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
+  //
+  const selectedData = useSelector(selectEm);
+  //
+  const loc = useSelector(selectLocations);
+  // const dispatch = useDispatch();
 
   //prettier-ignore
   // useEffect(()=>{setIt(dispatch())}, [])
 
-  //
   const [searchTerm, setSearchTerm] = useState("");
+  //
   const filtered = ldata.locations.filter((val) => {
     if (searchTerm == "") {
       return val;
