@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  count: 1,
+  count: 0,
 };
 
 // prettier-ignore

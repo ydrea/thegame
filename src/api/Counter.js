@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../redux/counterSlice";
+import { zip } from "lodash";
+
 //
+const yip = zip(["a", "b"], [1, 2], [true, false]);
+console.log("lodash", yip);
+//
+
 function Counter() {
-  const dispatch = useDispatch();
-  // const [count, countSet] = useState(1);
   return (
     <div>
-      <AddOneButton />
+      <Buttons />
       <Monitor />
     </div>
   );
 }
 //
-export const AddOneButton = () => {
+export const Buttons = () => {
   const dispatch = useDispatch();
 
   return (
