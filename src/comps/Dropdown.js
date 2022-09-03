@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-function Dropdown() {
-  const [drop, dropSet] = useState("pilot");
-
-  useEffect(() => {}, [drop]);
+function Dropdown({ drop, dropSet }) {
+  //   useEffect(() => {}, [drop]);
 
   const handleChange = (e) => {
     dropSet(e.target.value);

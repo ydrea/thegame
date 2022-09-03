@@ -6,6 +6,7 @@ export const dataSlice = createSlice({
   name: "loc",
   initialState: importedData,
   reducers: {
+    setIt: (state)=>(state),
     reSet: (state) => (state=[]),
   },
 });

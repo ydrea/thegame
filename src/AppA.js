@@ -5,7 +5,6 @@ import Dropdown from "./comps/Dropdown";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //
-import ldata from "./data/db.json";
 import Counter from "./comps/Counter";
 import {
   setIt,
@@ -17,6 +16,11 @@ import {
 import { selectCount } from "./redux/counterSlice";
 //
 function App() {
+  //
+
+  const [drop, dropSet] = useState("pilot");
+  //
+
   const count = useSelector(selectCount);
   //
   const selectedData = useSelector(selectEm);
@@ -60,10 +64,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img className="App-logo" src={logo} alt="logo" />
-        <Dropdown />
+        <Dropdown drop={drop} dropSet={dropSet} />
       </header>
-      <div>Response {listA[`${count}`]}</div>
-      <div>Response {listB[`${count - 7}`]}</div>
+      {drop === "pilot" ? (
+        <div>Sculptures {listA[`${count}`]}</div>
+      ) : (
+        <div>Planets {listB[`${count - 7}`]}</div>
+      )}
       <Counter />
     </div>
   );
