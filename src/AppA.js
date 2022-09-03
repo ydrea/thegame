@@ -69,7 +69,7 @@ function App() {
       {drop === "pilot" ? (
         <div>Sculptures {listA[`${count}`]}</div>
       ) : (
-        <div>Planets {listB[`${count - 7}`]}</div>
+        <div>Planets {listB[`${count}`]}</div>
       )}
       <Counter />
     </div>
