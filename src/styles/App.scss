@@ -1,35 +1,55 @@
+//
+@import "./fonts";
+@import "./colors";
+@import "./mixin";
+// @import "./clickables";
+@import "./toggle";
+//light
+html {
+  background: $prim;
+  color: $second;
+}
+//dark
+html.dark {
+  background: $second;
+  color: $prim;
+}
+//
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 30vmin;
-  // max-height: 30px;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-}
-
-.App-header {
-  background-color: #af8e2f;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  display: block;
+  min-block-size: 100vh;
+  background-color: $light;
+  color: $prim;
+  .logo {
+    height: 30vmin;
+    pointer-events: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  // @media  {}
+
+  .header {
+    border-bottom: 3px;
+    border-color: $prim;
+    background-color: $light;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: calc(10px + 2vmin);
+    color: $prim;
+
+    .main {
+      border-top: 3px;
+      border-color: $prim;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .link {
+      color: $dark;
+    }
   }
 }

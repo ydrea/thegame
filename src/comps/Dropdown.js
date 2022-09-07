@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Dropdown({ drop, dropSet }) {
-  //   useEffect(() => {}, [drop]);
-
   const handleChange = (e) => {
     dropSet(e.target.value);
   };
   return (
     <label>
       {" "}
-      Choose your game!
+      Choose your game!&nbsp;
       <select value={drop} onChange={handleChange}>
-        <option value="pilot">Sculptures</option>
+        <option value="sculptures">Sculptures</option>
         <option value=" planets">Planets</option>
       </select>
     </label>
