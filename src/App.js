@@ -1,8 +1,7 @@
 import logo from "./assets/logo.svg";
 import "./styles/App.scss";
 import Dropdown from "./comps/Dropdown";
-import { ToggleLD } from "./comps/ToggleLD";
-// import Mapa from "./comps/Mapa";
+import Footer from "./comps/Footer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //
@@ -29,11 +28,8 @@ function App() {
   const loc = useSelector(selectSculptures);
   const planets = useSelector(selectPlanets);
 
-  // const dispatch = useDispatch();
-  //prettier-ignore
-  // useEffect(()=>{setIt(dispatch())}, [])
   //
-  const [searchLoc, ] = useState("");
+  const [searchLoc] = useState("");
   //
   const [searchPlan] = useState("");
   //
@@ -66,7 +62,7 @@ function App() {
       <header className="header">
         <img className="logo" src={logo} alt="logo" />
         <Dropdown drop={drop} dropSet={dropSet} />
-        <ToggleLD />
+        {/* <ToggleLD /> */}
       </header>
       <main className="main">
         {drop === "pilot" ? (
@@ -76,6 +72,7 @@ function App() {
         )}
         <Counter className="count" />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -9,3 +9,10 @@
     }
   }
 }
+
+@mixin kontenjer {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
