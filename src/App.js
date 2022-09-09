@@ -1,6 +1,6 @@
 import logo from "./assets/logo.svg";
 import "./styles/App.scss";
-import Dropdown from "./comps/Dropdown";
+import DropDown from "./comps/DropDown";
 import Footer from "./comps/Footer";
 import { ToggleLD } from "./comps/ToggleLD";
 // import Mapa from "./comps/Mapa";
@@ -66,7 +66,7 @@ function App() {
     <div className="App">
       <header className="header">
         <img className="logo" src={logo} alt="logo" />
-        <Dropdown drop={drop} dropSet={dropSet} />
+        <DropDown drop={drop} dropSet={dropSet} />
         {/* <ToggleLD /> */}
       </header>
       <main className="main">
