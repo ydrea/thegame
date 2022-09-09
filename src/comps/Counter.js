@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, selectCount } from "../redux/counterSlice";
 import { zip } from "lodash";
+import { Button } from "reactstrap";
 
 //
 const yip = zip(["a", "b"], [1, 2], [true, false]);
@@ -22,8 +23,20 @@ export const Buttons = () => {
 
   return (
     <div>
-      <button onClick={() => dispatch(decrement())}>&lArr;</button>
-      <button onClick={() => dispatch(increment())}>&rArr;</button>
+      <Button
+        className="button"
+        size="lg"
+        onClick={() => dispatch(decrement())}
+      >
+        &lArr; ajd
+      </Button>
+      <Button
+        className="button"
+        size="lg"
+        onClick={() => dispatch(increment())}
+      >
+        ajd &rArr;
+      </Button>
     </div>
   );
 };

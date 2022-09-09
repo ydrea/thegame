@@ -16,3 +16,6 @@
   display: flex;
   flex-direction: column;
 }
+@mixin fontsize {
+  font-size: calc(10px + 2.4vmin);
+}

@@ -2,8 +2,7 @@
 @import "./fonts";
 @import "./colors";
 @import "./mixin";
-// @import "./clickables";
-@import "./toggle";
+@import "./clickables";
 
 body {
   margin: 0;
@@ -32,10 +31,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
+  @include fontsize;
   color: $prim;
 }
 .main {
+  @include fontsize;
+
   margin-bottom: 1px;
   border-top: 3px solid;
   border-bottom: 3px solid;
@@ -45,21 +46,22 @@ body {
   align-items: center;
   justify-content: space-evenly;
   .A {
-    font-size: 2rem;
+    border: 2px;
   }
   .B {
-    font-size: 2rem;
+    border: 2px;
   }
   .count {
-    font-size: 2rem;
+    border: 2px;
   }
 }
 .footer {
+  @include fontsize;
+
   height: 9vh;
   background-color: $light;
   position: fixed;
   bottom: 0;
-  font-size: 2rem;
   width: 100%;
   max-width: inherit;
 }

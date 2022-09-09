@@ -8,54 +8,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.toggle-container {
-  display: flex;
-}
-
-.react-switch-checkbox {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-.react-switch-label {
-  margin-top: 0.15rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.button, .link {
+  font-size: calc(10px + 2.4vmin);
+  border: 2px solid;
+  margin: 2px;
+  color: #e2ba42;
+  background: #31328f;
   cursor: pointer;
-  width: 2.1rem;
-  height: 1.1rem;
-  background-color: #cea93d;
-  border-radius: 10px;
-  position: relative;
-  transition: background-color 0.1s;
+  padding: 0.1rem 0.1rem;
+  margin-top: 0.1rem;
+}
+.button:hover, .link:hover {
+  border: dotted;
 }
 
-.react-switch-label .react-switch-button {
-  content: "";
-  position: absolute;
-  top: 2px;
-  bottom: 2px;
-  left: 2px;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 45px;
-  border-width: 0.2rem;
-  border-style: double;
-  border-color: red;
-  transition: 0.1s;
-  background: #e2ba42;
-  cursor: pointer;
-}
-
-.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
-  left: calc(100% - 2px);
-  transform: translateX(-100%);
-}
-
-.react-switch-label:active .react-switch-button {
-  width: 30px;
+.link {
+  text-decoration: none;
 }
 
 body {
@@ -83,11 +51,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2.4vmin);
   color: #e2ba42;
 }
 
 .main {
+  font-size: calc(10px + 2.4vmin);
   margin-bottom: 1px;
   border-top: 3px solid;
   border-bottom: 3px solid;
@@ -98,21 +67,21 @@ body {
   justify-content: space-evenly;
 }
 .main .A {
-  font-size: 2rem;
+  border: 2px;
 }
 .main .B {
-  font-size: 2rem;
+  border: 2px;
 }
 .main .count {
-  font-size: 2rem;
+  border: 2px;
 }
 
 .footer {
+  font-size: calc(10px + 2.4vmin);
   height: 9vh;
   background-color: #31328f;
   position: fixed;
   bottom: 0;
-  font-size: 2rem;
   width: 100%;
   max-width: inherit;
 }/*# sourceMappingURL=App.css.map */
