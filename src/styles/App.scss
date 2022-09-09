@@ -4,16 +4,6 @@
 @import "./mixin";
 // @import "./clickables";
 @import "./toggle";
-//light
-html {
-  background: $prim;
-  color: $second;
-}
-//dark
-html.dark {
-  background: $second;
-  color: $prim;
-}
 
 body {
   margin: 0;
@@ -21,9 +11,9 @@ body {
 }
 //
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  display: block;
-  min-block-size: 100vh;
   background-color: $light;
   color: $prim;
   .logo {
@@ -32,48 +22,44 @@ body {
   }
 
   // @media  {}
+}
 
-  .header {
-    border-bottom: 3px;
-    border-color: $prim;
-    background-color: $light;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: calc(10px + 2vmin);
-    color: $prim;
-
-    .main {
-      // min-height: 800px;
-      margin-bottom: 1rem;
-      border-top: 3px solid;
-      border-bottom: 3px solid;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      .A {
-        background-color: $second;
-        color: $dark;
-      }
-      .B {
-        background-color: $prim;
-      }
-    }
-    .footer {
-      @include kontenjer;
-      margin-top: 1rem;
-      justify-content: center;
-      align-items: flex-end;
-      position: fixed;
-      bottom: 0;
-      font-size: 1.4rem;
-      width: 100%;
-      max-width: inherit;
-      .link {
-        text-decoration: none !important;
-      }
-    }
+.header {
+  border-bottom: 3px;
+  border-color: $prim;
+  background-color: $light;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: $prim;
+}
+.main {
+  margin-bottom: 1px;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .A {
+    font-size: 2rem;
   }
+  .B {
+    font-size: 2rem;
+  }
+  .count {
+    font-size: 2rem;
+  }
+}
+.footer {
+  height: 9vh;
+  background-color: $light;
+  position: fixed;
+  bottom: 0;
+  font-size: 2rem;
+  width: 100%;
+  max-width: inherit;
 }

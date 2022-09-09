@@ -58,25 +58,15 @@ code {
   width: 30px;
 }
 
-html {
-  background: #e2ba42;
-  color: #cea93d;
-}
-
-html.dark {
-  background: #cea93d;
-  color: #e2ba42;
-}
-
 body {
   margin: 0;
   display: block;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  display: block;
-  min-block-size: 100vh;
   background-color: #31328f;
   color: #e2ba42;
 }
@@ -84,7 +74,8 @@ body {
   height: 30vmin;
   pointer-events: none;
 }
-.App .header {
+
+.header {
   border-bottom: 3px;
   border-color: #e2ba42;
   background-color: #31328f;
@@ -95,36 +86,33 @@ body {
   font-size: calc(10px + 2vmin);
   color: #e2ba42;
 }
-.App .header .main {
-  margin-bottom: 1rem;
+
+.main {
+  margin-bottom: 1px;
   border-top: 3px solid;
   border-bottom: 3px solid;
-  min-height: 70vh;
+  height: 60vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.App .header .main .A {
-  background-color: #cea93d;
-  color: #323;
+.main .A {
+  font-size: 2rem;
 }
-.App .header .main .B {
-  background-color: #e2ba42;
+.main .B {
+  font-size: 2rem;
 }
-.App .header .footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  justify-content: center;
-  align-items: flex-end;
+.main .count {
+  font-size: 2rem;
+}
+
+.footer {
+  height: 9vh;
+  background-color: #31328f;
   position: fixed;
   bottom: 0;
-  font-size: 1.4rem;
+  font-size: 2rem;
   width: 100%;
   max-width: inherit;
-}
-.App .header .footer .link {
-  text-decoration: none !important;
 }/*# sourceMappingURL=App.css.map */

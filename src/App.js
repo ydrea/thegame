@@ -2,6 +2,8 @@ import logo from "./assets/logo.svg";
 import "./styles/App.scss";
 import Dropdown from "./comps/Dropdown";
 import Footer from "./comps/Footer";
+import { ToggleLD } from "./comps/ToggleLD";
+// import Mapa from "./comps/Mapa";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //
@@ -18,7 +20,7 @@ import { selectCount } from "./redux/counterSlice";
 function App() {
   //
 
-  const [drop, dropSet] = useState("pilot");
+  const [drop, dropSet] = useState("sculptures");
   //
 
   const count = useSelector(selectCount);
@@ -28,6 +30,9 @@ function App() {
   const loc = useSelector(selectSculptures);
   const planets = useSelector(selectPlanets);
 
+  // const dispatch = useDispatch();
+  //prettier-ignore
+  // useEffect(()=>{setIt(dispatch())}, [drop])
   //
   const [searchLoc] = useState("");
   //
@@ -65,7 +70,7 @@ function App() {
         {/* <ToggleLD /> */}
       </header>
       <main className="main">
-        {drop === "pilot" ? (
+        {drop === "sculptures" ? (
           <div className="A">Sculptures {listA[`${count}`]}</div>
         ) : (
           <div className="B">Planets {listB[`${count}`]}</div>

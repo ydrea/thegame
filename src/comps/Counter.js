@@ -32,9 +32,9 @@ export const Monitor = () => {
   const count = useSelector(selectCount);
 
   return (
-    <>
+    <div className="count">
       <div>counter: {count} </div>
-    </>
+    </div>
   );
 };
 
