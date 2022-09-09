@@ -8,7 +8,7 @@ function Dropdown({ drop, dropSet }) {
     <label>
       {" "}
       Choose your game!&nbsp;
-      <select value={drop} onChange={handleChange}>
+      <select className="button" value={drop} onChange={handleChange}>
         <option value="sculptures">Sculptures</option>
         <option value=" planets">Planets</option>
       </select>
