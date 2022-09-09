@@ -2,7 +2,6 @@ import logo from "./assets/logo.svg";
 import "./styles/App.scss";
 import DropDown from "./comps/DropDown";
 import Footer from "./comps/Footer";
-import { ToggleLD } from "./comps/ToggleLD";
 // import Mapa from "./comps/Mapa";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
