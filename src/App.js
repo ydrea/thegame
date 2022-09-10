@@ -2,12 +2,14 @@ import "./styles/App.scss";
 import Header from "./comps/Header";
 import Main from "./comps/Main";
 import Footer from "./comps/Footer";
-
+import { useState } from "react";
+//
 function App() {
+  const [drop, dropSet] = useState();
   return (
     <div className="app">
-      <Header />
-      <Main />
+      <Header drop={drop} dropSet={dropSet} />
+      <Main drop={drop} />
       <Footer />
     </div>
   );

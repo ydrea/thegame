@@ -44,8 +44,7 @@ function App() {
       console.log(i);
       return i;
     }
-    // console.log(scul);
-    return <Error />;
+    console.log(scul);
   });
   const listA = filtered.map((i, key) => {
     // console.log(i.img);

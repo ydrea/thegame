@@ -2,12 +2,9 @@ import logo from "../assets/logo.svg";
 import "../styles/App.scss";
 import DropDown from "./DropDown";
 //
-import { useState } from "react";
-import { Dropdown } from "reactstrap";
+// import { Dropdown } from "reactstrap";
 //
-function Header() {
-  const [drop, dropSet] = useState();
-
+function Header({ drop, dropSet }) {
   return (
     <header className="header">
       <img className="logo" src={logo} alt="logo" />
