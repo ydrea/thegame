@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import data from "./data/db.json";
 
+//Planets
+const planeted = planets.filter((ii) => {
+  if (ii.name.toLowerCase().includes(searchPlan.toLowerCase())) {
+    return ii;
+  }
+  return planets;
+});
+const listB = planeted.map((ii, key) => {
+  return ii.name;
+});
+
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   console.log(data.locations);
