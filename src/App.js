@@ -2,6 +2,7 @@ import logo from "./assets/logo.svg";
 import "./styles/App.scss";
 import DropDown from "./comps/DropDown";
 import Footer from "./comps/Footer";
+import { Button, Input } from "reactstrap";
 // import Mapa from "./comps/Mapa";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,51 +27,65 @@ function App() {
   //
   const selectedData = useSelector(selectEm);
   //
-  const loc = useSelector(selectSculptures);
+  const scul = useSelector(selectSculptures);
   const planets = useSelector(selectPlanets);
 
   // const dispatch = useDispatch();
   //prettier-ignore
   // useEffect(()=>{setIt(dispatch())}, [drop])
   //
-  const [searchLoc] = useState("");
+  const [searchScul, searchSculSet] = useState("");
   //
-  const [searchPlan] = useState("");
+  const [searchPlan, searchPlanSet] = useState("");
   //
-  const filtered = loc.filter((i) => {
-    if (searchLoc == "") {
-      console.log(i);
-      return i;
-    } else if (i.name.toLowerCase().includes(searchLoc.toLowerCase())) {
+  const filtered = scul.filter((i) => {
+    if (i.name.toLowerCase().includes(searchScul.toLowerCase())) {
       return i;
     }
+    return scul;
   });
   const listA = filtered.map((i, key) => {
     return i.name;
   });
   //
   const planeted = planets.filter((ii) => {
-    if (searchPlan == "") {
-      console.log(ii);
-      return ii;
-    } else if (ii.name.toLowerCase().includes(searchPlan.toLowerCase())) {
+    if (ii.name.toLowerCase().includes(searchPlan.toLowerCase())) {
       return ii;
     }
+    return planets;
   });
   const listB = planeted.map((ii, key) => {
     return ii.name;
   });
+
+  const handleChange = (e) => {
+    searchSculSet(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(searchScul);
+  };
 
   return (
     <div className="App">
       <header className="header">
         <img className="logo" src={logo} alt="logo" />
         <DropDown drop={drop} dropSet={dropSet} />
-        {/* <ToggleLD /> */}
       </header>
+
       <main className="main">
         {drop === "sculptures" ? (
-          <div className="A">Sculptures {listA[`${count}`]}</div>
+          <div className="A">
+            Sculptures {listA[`${count}`]}
+            {/* <img src={listA.img} /> */}
+            <form onSubmit={handleSubmit}>
+              <Input type="text" value={searchScul} onChange={handleChange} />
+              <Button className="button" type="submit">
+                x
+              </Button>
+            </form>
+          </div>
         ) : (
           <div className="B">Planets {listB[`${count}`]}</div>
         )}

@@ -1,6 +1,6 @@
 %clickables {
   @include fontsize;
-  position: flex;
+  position: inline;
   border: 2px solid;
   margin: 2px;
   color: $prim;
@@ -13,6 +13,12 @@
   &:hover {
     color: $light;
     background-color: $prim;
+    padding: 0.17rem;
+  }
+  &:disabled,
+  .button[disabled] {
+    color: $light;
+    pointer-events: none;
   }
 }
 .link {
