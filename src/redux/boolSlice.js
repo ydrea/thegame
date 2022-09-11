@@ -11,12 +11,10 @@ export const boolSlice = createSlice({
   reducers: {
     itsTrue: (state)=>{state.boo=true},
     itsFalse: (state)=>{state.boo=false},
-    toggle: (state, action) => {state.boo = action.payload.boo},
-    toggleSw: (state) => {state.boo = !state.boo},
   },
 });
 //actions
-export const { toggle, toggleSw, itsTrue, itsFalse } = boolSlice.actions;
+export const { itsTrue, itsFalse } = boolSlice.actions;
 //selectors
 export const selectToggle = (state) => state.boolean.boo;
 //reducer
