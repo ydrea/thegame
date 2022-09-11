@@ -4,18 +4,18 @@ import { useBool } from "../custom/useBool";
 import { useBoolRedux } from "../custom/useBoolRedux";
 
 function Footer() {
-  const [jel, { setToggle }] = useBool(false);
-  const [aha, { setToggleRedux }] = useBoolRedux(false);
+  const [FOO, { setToggle }] = useBool(false);
+  const [BAR, { setToggleRedux }] = useBoolRedux(false);
   return (
     <div className="footer">
       <Button className="button" onClick={setToggle}>
         setToggle
       </Button>
-      {jel.toString()}
+      {FOO.toString()}
       <Button className="button" onClick={setToggleRedux}>
         setToggleRedux
       </Button>
-      {aha.toString()}
+      {BAR.toString()}
     </div>
   );
 }
