@@ -29,14 +29,14 @@ function AGame() {
   console.log(sculpture);
   // //
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       <QCard
         sculpture={sculpture}
         query={query}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-      {search == sculpture.name ? <RCard /> : null}
+      {search == sculpture.name ? <RCard sculpture={sculpture} /> : null}
     </div>
   );
 }

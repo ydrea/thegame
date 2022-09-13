@@ -13,8 +13,8 @@ console.log("lodash", yip);
 function Counter() {
   return (
     <div>
-      <Buttons />
       <Monitor />
+      <Buttons />
     </div>
   );
 }
