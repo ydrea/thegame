@@ -17,6 +17,8 @@ import {
   selectPlanets,
 } from "./redux/dataSlice";
 import { selectCount } from "./redux/counterSlice";
+import ProgressBar from "./comps/ProgressBar";
+import ProgressBA from "./comps/ProgressBar";
 //
 function App() {
   //
@@ -73,30 +75,11 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img className="logo" src={logo} alt="logo" />
         <DropDown drop={drop} dropSet={dropSet} />
       </header>
 
       <main className="main">
-        {drop === "sculptures" ? (
-          <div className="A">
-            Sculptures {listA[`${count}`]}
-            {/* <img src={img} /> */}
-            <form onSubmit={handleSubmit}>
-              <Input
-                placeholder="Enter Your response"
-                type="text"
-                value={searchScul}
-                onChange={handleChange}
-              />
-              <Button className="button" type="submit">
-                x
-              </Button>
-            </form>
-          </div>
-        ) : (
-          <div className="B">Planets {listB[`${count}`]}</div>
-        )}
+        <ProgressBA count={count} />
         <Counter className="count" />
       </main>
       <Footer />

@@ -3,7 +3,8 @@
 @import "./colors";
 @import "./mixin";
 @import "./clickables";
-
+// @import "./bar";
+//
 body {
   margin: 0;
   display: block;
@@ -37,7 +38,6 @@ body {
 
 .main {
   @include fontsize;
-
   margin-bottom: 1px;
   border-top: 3px solid;
   border-bottom: 3px solid;
@@ -46,6 +46,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  .input {
+    @include fontsize;
+    background-color: $prim;
+    height: 1.5rem;
+    color: $light;
+    max-width: 12.4rem;
+  }
   .A {
     border: 2px;
   }

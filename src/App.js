@@ -5,7 +5,7 @@ import Footer from "./comps/Footer";
 import { useState } from "react";
 //
 function App() {
-  const [drop, dropSet] = useState();
+  const [drop, dropSet] = useState("sculptures");
   return (
     <div className="app">
       <Header drop={drop} dropSet={dropSet} />

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, selectCount } from "../redux/counterSlice";
 import { zip } from "lodash";
 import { Button } from "reactstrap";
+import ProgressBA from "./ProgressBar";
 
 //
 const yip = zip(["a", "b"], [1, 2], [true, false]);
@@ -46,7 +47,8 @@ export const Monitor = () => {
 
   return (
     <div className="count">
-      <div>counter: {count} </div>
+      {/* <div>counter: {count} </div> */}
+      <ProgressBA count={count} />
     </div>
   );
 };

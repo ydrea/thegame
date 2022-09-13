@@ -10,16 +10,25 @@ code {
 
 .button, .link {
   font-size: calc(10px + 2.4vmin);
+  position: inline;
   border: 2px solid;
   margin: 2px;
   color: #e2ba42;
   background: #31328f;
   cursor: pointer;
   padding: 0.1rem 0.1rem;
-  margin-top: 0.1rem;
+  margin: 0.4rem;
 }
 .button:hover, .link:hover {
-  border: dotted;
+  color: #31328f;
+  background-color: #e2ba42;
+  padding: 0.17rem;
+}
+.button:disabled, .link:disabled,
+.button .button[disabled],
+.link .button[disabled] {
+  color: #31328f;
+  pointer-events: none;
 }
 
 .link {
@@ -31,14 +40,14 @@ body {
   display: block;
 }
 
-.App {
+.app {
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: #31328f;
   color: #e2ba42;
 }
-.App .logo {
+.app .logo {
   height: 30vmin;
   pointer-events: none;
 }
@@ -65,6 +74,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.main .input {
+  font-size: calc(10px + 2.4vmin);
+  background-color: #e2ba42;
+  height: 1.5rem;
+  color: #31328f;
+  max-width: 12.4rem;
 }
 .main .A {
   border: 2px;

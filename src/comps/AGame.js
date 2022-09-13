@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { Card, Input, Button } from "reactstrap";
 import Counter from "./Counter";
 //
-import { selectSculptures, selectPlanets } from "../redux/dataSlice";
+import { selectSculptures } from "../redux/dataSlice";
 import { selectCount } from "../redux/counterSlice";
 //
 function AGame() {
   //local stejt
   const [query, querySet] = useState("");
-  const [search, searchSet] = useState();
+  const [, searchSet] = useState();
   const handleChange = (e) => {
     querySet(e.target.value);
   };
@@ -35,14 +35,15 @@ function AGame() {
         />
         <form onSubmit={handleSubmit}>
           <Input
-            placeholder="Enter Your response"
+            className="input"
+            placeholder="Enter response"
             type="text"
             value={query}
             onChange={handleChange}
           />
 
           <Button className="button" type="submit">
-            x
+            enter
           </Button>
         </form>
       </Card>
