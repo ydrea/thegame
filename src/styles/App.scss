@@ -51,7 +51,7 @@ body {
     background-color: $prim;
     height: 1.5rem;
     color: $light;
-    max-width: 12.4rem;
+    max-width: 9rem;
   }
   .A {
     border: 2px;
@@ -64,9 +64,12 @@ body {
   }
 }
 .footer {
-  @include fontsize;
-
-  height: 9vh;
+  // @include fontsize;
+  height: 13vh;
+  display: flex;
+  // flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: $light;
   position: fixed;
   bottom: 0;

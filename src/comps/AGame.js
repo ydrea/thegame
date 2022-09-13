@@ -27,7 +27,7 @@ function AGame() {
   // //
   return (
     <div>
-      <Card style={{ width: "19rem" }}>
+      <Card style={{ width: "15rem" }}>
         <img
           style={{ width: "17rem" }}
           alt="slija"
@@ -47,7 +47,6 @@ function AGame() {
           </Button>
         </form>
       </Card>
-      <Counter />
     </div>
   );
 }
