@@ -17,7 +17,7 @@ body {
   background-color: $light;
   color: $prim;
   .logo {
-    height: 30vmin;
+    height: 25vmin;
     pointer-events: none;
   }
 
@@ -28,7 +28,7 @@ body {
   border-bottom: 3px;
   border-color: $prim;
   background-color: $light;
-  height: 30vh;
+  height: 25vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -37,10 +37,10 @@ body {
 }
 
 .main {
-  @include fontsize;
+  // @include fontsize;
   margin-bottom: 1px;
   border-top: 3px solid;
-  border-bottom: 3px solid;
+  // border-bottom: 3px solid;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ body {
   .input {
     @include fontsize;
     background-color: $prim;
-    height: 1.5rem;
+    height: 1.3rem;
     color: $light;
     max-width: 9rem;
   }
@@ -65,7 +65,7 @@ body {
 }
 .footer {
   // @include fontsize;
-  height: 13vh;
+  height: 13.7vh;
   display: flex;
   // flex-direction: row;
   align-items: center;

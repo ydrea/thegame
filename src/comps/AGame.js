@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
-import { Card, Input, Button } from "reactstrap";
-import Counter from "./Counter";
+import QCard from "./QCard";
+import RCard from "./RCard";
 //
 import { selectSculptures } from "../redux/dataSlice";
 import { selectCount } from "../redux/counterSlice";
@@ -9,13 +9,16 @@ import { selectCount } from "../redux/counterSlice";
 function AGame() {
   //local stejt
   const [query, querySet] = useState("");
-  const [, searchSet] = useState();
+  const [search, searchSet] = useState();
   const handleChange = (e) => {
     querySet(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     searchSet(query);
+    console.log(search);
+    searchSet("");
+    console.log(search);
   };
 
   //selectas
@@ -27,26 +30,13 @@ function AGame() {
   // //
   return (
     <div>
-      <Card style={{ width: "15rem" }}>
-        <img
-          style={{ width: "17rem" }}
-          alt="slija"
-          src={`/sculptures/${sculpture.img}`}
-        />
-        <form onSubmit={handleSubmit}>
-          <Input
-            className="input"
-            placeholder="Enter response"
-            type="text"
-            value={query}
-            onChange={handleChange}
-          />
-
-          <Button className="button" type="submit">
-            enter
-          </Button>
-        </form>
-      </Card>
+      <QCard
+        sculpture={sculpture}
+        query={query}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+      {query == sculpture.name ? <RCard /> : null}
     </div>
   );
 }
