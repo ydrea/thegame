@@ -17,7 +17,7 @@ function AGame() {
     e.preventDefault();
     searchSet(query);
     console.log(search);
-    searchSet("");
+    querySet("");
     console.log(search);
   };
 
@@ -36,7 +36,7 @@ function AGame() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-      {query == sculpture.name ? <RCard /> : null}
+      {search == sculpture.name ? <RCard /> : null}
     </div>
   );
 }
