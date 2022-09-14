@@ -63,6 +63,13 @@ body {
     border: 2px;
   }
 }
+
+.rcard {
+  max-width: 17.6rem;
+  text-align: left;
+  font-size: 16px;
+}
+
 .footer {
   // @include fontsize;
   height: 13.7vh;

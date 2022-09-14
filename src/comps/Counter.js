@@ -20,21 +20,24 @@ function Counter() {
 export const Buttons = () => {
   const dispatch = useDispatch();
 
+  const count = useSelector(selectCount);
   return (
     <div>
-      <Button
-        className="button"
-        size="lg"
-        onClick={() => dispatch(decrement())}
-      >
-        &lArr; ajd
-      </Button>
+      {count > 0 ? (
+        <Button
+          className="button"
+          size="lg"
+          onClick={() => dispatch(decrement())}
+        >
+          &lArr; prev
+        </Button>
+      ) : null}{" "}
       <Button
         className="button"
         size="lg"
         onClick={() => dispatch(increment())}
       >
-        ajd &rArr;
+        next &rArr;
       </Button>
     </div>
   );
@@ -45,7 +48,6 @@ export const Monitor = () => {
 
   return (
     <div className="count">
-      {/* <div>counter: {count} </div> */}
       <ProgressBA count={count} />
     </div>
   );

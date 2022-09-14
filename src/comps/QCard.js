@@ -12,18 +12,23 @@ function QCard({ sculpture, query, handleChange, handleSubmit }) {
           alt="slija"
           src={`/sculptures/${sculpture.img}`}
         />
-        <form onSubmit={handleSubmit}>
-          <Input
-            className="input"
-            placeholder="Enter response"
-            type="text"
-            value={query}
-            onChange={handleChange}
-          />
-          <Button className="button" type="submit">
-            enter
-          </Button>
-        </form>
+
+        {sculpture.id > 0 ? (
+          <form onSubmit={handleSubmit}>
+            <Input
+              className="input"
+              placeholder="Enter response"
+              type="text"
+              value={query}
+              onChange={handleChange}
+            />
+            <Button className="button" type="submit">
+              enter
+            </Button>
+          </form>
+        ) : (
+          <div>Start playing by clicking "Next" below </div>
+        )}
       </Card>
     </div>
   );

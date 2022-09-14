@@ -3,9 +3,8 @@ import { Card } from "reactstrap";
 function RCard({ sculpture }) {
   return (
     <div>
-      RCard
-      <Card style={{ width: "19rem" }}>
-        <p>Correct!</p>
+      <p>Correct!</p>
+      <Card className="rcard">
         <div>{sculpture.description}</div>
       </Card>
     </div>
