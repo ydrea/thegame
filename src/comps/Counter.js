@@ -34,7 +34,7 @@ export const Switch = () => {
   if (count === 0) {
     console.log("nula");
     return <NButton />;
-  } else if (count < 7) {
+  } else if (count < 8) {
     return <Nav />;
   } else {
     return <PButton />;

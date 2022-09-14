@@ -6,7 +6,7 @@ function QCard({ sculpture, query, handleChange, handleSubmit }) {
     <div>
       {" "}
       <Card style={{ width: "19rem" }}>
-        <p>Enter the first name of the person that the sculpture depicts</p>
+        <p>{sculpture.question}</p>
         <img
           style={{ width: "17rem" }}
           alt="slija"
