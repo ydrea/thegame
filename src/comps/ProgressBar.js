@@ -11,7 +11,7 @@ const ProgressBA = (props) => {
         width="19rem"
         height="1rem"
         borderRadius="5px"
-        maxCompleted={6}
+        maxCompleted={7}
         isLabelVisible={true}
         transitionTimingFunction="ease"
         bgColor="#e2ba42"

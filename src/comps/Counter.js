@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, selectCount } from "../redux/counterSlice";
 // import { zip } from "lodash";
@@ -12,26 +12,58 @@ function Counter() {
   return (
     <div>
       <Monitor />
-      <Buttons />
+      <Switch />{" "}
     </div>
   );
 }
 //
-export const Buttons = () => {
-  const dispatch = useDispatch();
 
+function Nav() {
+  return (
+    <div style={{ display: "flex" }}>
+      <PButton />
+      <NButton />
+    </div>
+  );
+}
+//
+export const Switch = () => {
+  // const [game, gameSet] = useState("start");
   const count = useSelector(selectCount);
+  //
+  if (count === 0) {
+    console.log("nula");
+    return <NButton />;
+  } else if (count < 7) {
+    return <Nav />;
+  } else {
+    return <PButton />;
+  }
+};
+
+export const PButton = () => {
+  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
+
   return (
     <div>
-      {count > 0 ? (
-        <Button
-          className="button"
-          size="lg"
-          onClick={() => dispatch(decrement())}
-        >
-          &lArr; prev
-        </Button>
-      ) : null}{" "}
+      <Button
+        className="button"
+        size="lg"
+        onClick={() => dispatch(decrement())}
+      >
+        &lArr; prev
+      </Button>
+    </div>
+  );
+};
+
+export const NButton = () => {
+  const dispatch = useDispatch();
+  const count = useSelector(selectCount);
+
+  return (
+    <div>
       <Button
         className="button"
         size="lg"
