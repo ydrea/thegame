@@ -6,7 +6,7 @@
       "coordinate": { "latitude": 45.8135, "longitude": 15.9814 },
       "name": "Kumica",
       "surname": "sPlaca",
-      "question": "Enter the first name of the person that the monument represents",
+      "question": " ",
       "description": "The game is played",
       "icon": "assets/ico/ping_0.png",
       "img": "assets/img/Kumica.jpg"
@@ -93,10 +93,10 @@
       "id": 8,
       "title": "fin",
       "coordinate": { "latitude": 45.8135, "longitude": 15.9814 },
-      "name": "Faca",
+      "name": "*",
       "surname": "sPlaca",
       "question": "Well played! Enter YOUR name.",
-      "description": "Congrats!",
+      "description": "Congrats !",
       "icon": "assets/ico/ping_8.png",
       "img": "assets/img/Congratulation.jpg"
     }

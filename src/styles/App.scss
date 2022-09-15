@@ -19,16 +19,15 @@ body {
   .logo {
     height: 25vmin;
     pointer-events: none;
+    position: absolute;
   }
-
-  // @media  {}
 }
 
 .header {
   border-bottom: 3px;
   border-color: $prim;
   background-color: $light;
-  height: 25vh;
+  height: 14vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -41,7 +40,7 @@ body {
   margin-bottom: 1px;
   border-top: 3px solid;
   // border-bottom: 3px solid;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +50,7 @@ body {
     background-color: $prim;
     height: 1.3rem;
     color: $light;
-    max-width: 9rem;
+    max-width: 11rem;
   }
   .A {
     border: 2px;
@@ -72,7 +71,7 @@ body {
 
 .footer {
   // @include fontsize;
-  height: 13.7vh;
+  height: 15vh;
   display: flex;
   // flex-direction: row;
   align-items: center;
@@ -83,3 +82,5 @@ body {
   width: 100%;
   max-width: inherit;
 }
+
+// @media  {}
