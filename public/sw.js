@@ -1,5 +1,5 @@
 const CACHE_NAME = "cash-1";
-const urlsToCache = ["index.html"];
+const urlsToCache = ["/build/*.*"];
 
 const self = this;
 
