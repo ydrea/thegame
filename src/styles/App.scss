@@ -91,13 +91,13 @@ body {
 }
 
 //mi2
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   .cards {
-    // font-size: larger;
-    flex-direction: column;
+    font-size: smaller;
+    // flex-direction: row;
   }
 }
-@media (min-width: 356px) {
+@media (max-width: 356px) {
   .header {
     justify-content: left;
     margin: 0;
