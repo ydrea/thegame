@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 function Header({ drop, dropSet }) {
   return (
     <header className="header">
-      {/* <img className="logo" src={logo} alt="logo" /> */}
       <Link to="/Mapa" className="button">
         map
       </Link>

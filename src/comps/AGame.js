@@ -29,7 +29,7 @@ function AGame() {
   console.log(sculpture);
   // //
   return (
-    <div style={{ display: "flex" }}>
+    <div className="cards">
       <QCard
         sculpture={sculpture}
         query={query}

@@ -3,7 +3,6 @@
 @import "./colors";
 @import "./mixin";
 @import "./clickables";
-// @import "./bar";
 //
 body {
   margin: 0;
@@ -16,64 +15,59 @@ body {
   text-align: center;
   background-color: $light;
   color: $prim;
-  .logo {
-    height: 25vmin;
-    pointer-events: none;
-    position: absolute;
-  }
 }
 
 .header {
   border-bottom: 3px;
   border-color: $prim;
   background-color: $light;
-  height: 14vh;
+  max-height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  @include fontsize;
   color: $prim;
+  .drop {
+    display: flex;
+  }
 }
 
 .main {
-  // @include fontsize;
-  margin-bottom: 1px;
-  border-top: 3px solid;
-  // border-bottom: 3px solid;
-  height: 70vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  .input {
-    @include fontsize;
-    background-color: $prim;
-    height: 1.3rem;
-    color: $light;
-    max-width: 11rem;
+  height: 75%;
+}
+
+.cards {
+  display: flex;
+  .qcard {
+    flex-direction: column;
+    max-width: 18rem;
+    min-height: fit-content;
+    img {
+      max-width: 100%;
+    }
   }
-  .A {
-    border: 2px;
-  }
-  .B {
-    border: 2px;
-  }
-  .count {
-    border: 2px;
+  .rcard {
+    max-width: 18rem;
+    text-align: left;
+    font-size: 16px;
   }
 }
 
-.rcard {
-  max-width: 17.6rem;
-  text-align: left;
-  font-size: 16px;
+.form {
+  display: flex;
+}
+.input {
+  background-color: $prim;
+  height: 1.3rem;
+  color: $light;
+  max-width: 11rem;
 }
 
 .footer {
-  // @include fontsize;
-  height: 15vh;
+  max-height: 15%;
   display: flex;
-  // flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: $light;
@@ -83,4 +77,22 @@ body {
   max-width: inherit;
 }
 
-// @media  {}
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+//mi2
+@media (max-width: 425px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 356px) {
+  .header {
+    justify-content: left;
+    margin: 0;
+  }
+}

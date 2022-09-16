@@ -6,8 +6,7 @@ function DropDown({ drop, dropSet }) {
     dropSet(e.target.value);
   };
   return (
-    <span>
-      <label className="label"> Choose your game!</label>
+    <span className="drop">
       <select className="button" value={drop} onChange={handleChange}>
         <option value="sculptures">Sculptures</option>
         <option value=" planets">Planets</option>

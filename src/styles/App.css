@@ -10,7 +10,6 @@ code {
 
 .button, .link {
   font-size: calc(10px + 2.4vmin);
-  position: inline;
   border: 2px solid;
   margin: 2px;
   color: #e2ba42;
@@ -47,57 +46,84 @@ body {
   background-color: #31328f;
   color: #e2ba42;
 }
-.app .logo {
-  height: 30vmin;
-  pointer-events: none;
-}
 
 .header {
   border-bottom: 3px;
   border-color: #e2ba42;
   background-color: #31328f;
-  height: 30vh;
+  max-height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: calc(10px + 2.4vmin);
   color: #e2ba42;
+}
+.header .drop {
+  display: flex;
 }
 
 .main {
-  font-size: calc(10px + 2.4vmin);
-  margin-bottom: 1px;
-  border-top: 3px solid;
-  border-bottom: 3px solid;
-  height: 60vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  height: 75%;
 }
-.main .input {
-  font-size: calc(10px + 2.4vmin);
+
+.cards {
+  display: flex;
+}
+.cards .qcard {
+  flex-direction: column;
+  max-width: 18rem;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+.cards .qcard img {
+  max-width: 100%;
+}
+.cards .rcard {
+  max-width: 18rem;
+  text-align: left;
+  font-size: 16px;
+}
+
+.form {
+  display: flex;
+}
+
+.input {
   background-color: #e2ba42;
-  height: 1.5rem;
+  height: 1.3rem;
   color: #31328f;
-  max-width: 12.4rem;
-}
-.main .A {
-  border: 2px;
-}
-.main .B {
-  border: 2px;
-}
-.main .count {
-  border: 2px;
+  max-width: 11rem;
 }
 
 .footer {
-  font-size: calc(10px + 2.4vmin);
-  height: 9vh;
+  max-height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #31328f;
   position: fixed;
   bottom: 0;
   width: 100%;
   max-width: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 425px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 356px) {
+  .header {
+    justify-content: left;
+    margin: 0;
+  }
 }/*# sourceMappingURL=App.css.map */

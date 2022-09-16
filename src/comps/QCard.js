@@ -5,16 +5,12 @@ function QCard({ sculpture, query, handleChange, handleSubmit }) {
   return (
     <div>
       {" "}
-      <Card style={{ width: "19rem" }}>
+      <Card className="qcard">
         <p>{sculpture.question}</p>
-        <img
-          style={{ width: "17rem" }}
-          alt="slija"
-          src={`/sculptures/${sculpture.img}`}
-        />
+        <img alt="slija" src={`/sculptures/${sculpture.img}`} />
 
         {sculpture.id > 0 ? (
-          <form onSubmit={handleSubmit}>
+          <form className="form" onSubmit={handleSubmit}>
             <Input
               className="input"
               placeholder="Enter response"

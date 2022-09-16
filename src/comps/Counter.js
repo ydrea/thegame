@@ -20,7 +20,7 @@ function Counter() {
 
 function Nav() {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div className="nav">
       <PButton />
       <NButton />
     </div>
