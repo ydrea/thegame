@@ -24,7 +24,8 @@
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
     "sass": "^1.54.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-build": "^6.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
