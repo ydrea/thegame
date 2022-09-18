@@ -5,6 +5,7 @@
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.35",
     "@ramonak/react-progress-bar": "^5.0.2",
+    "@react-google-maps/api": "^2.12.2",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -16,6 +17,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-cli": "^2.0.1",
     "react-redux": "^8.0.2",
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^6.3.0",

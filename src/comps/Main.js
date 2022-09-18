@@ -5,9 +5,7 @@ import BGame from "./BGame";
 //
 function Main({ drop }) {
   console.log(drop);
-  return (
-    <main className="main">{drop === "planets" ? <BGame /> : <AGame />}</main>
-  );
+  return <main className="main">{drop === "map" ? <BGame /> : <AGame />}</main>;
 }
 
 export default Main;

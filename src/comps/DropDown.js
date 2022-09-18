@@ -9,7 +9,7 @@ function DropDown({ drop, dropSet }) {
     <span className="drop">
       <select className="button" value={drop} onChange={handleChange}>
         <option value="sculptures">Sculptures</option>
-        <option value=" planets">Planets</option>
+        <option value="map">Map</option>
       </select>
     </span>
   );
